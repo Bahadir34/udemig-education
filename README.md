@@ -28,13 +28,14 @@ Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 3. `index.html` dosyasını tarayıcınızda açın.
 
 ## 🖼️ Ekran Görüntüleri
-Proje arayüzüne dair ekran görüntülerini buraya ekleyebilirsiniz.
+![](./project-views/udemig-education-desktop.png)
+![](./project-views/udemig-education-mobile.png)
 
 ## 👤 Katkıda Bulunma
 Projeye katkıda bulunmak isterseniz **pull request** açabilirsiniz.
 
 ## 🌐 Canlı Önizleme
-[Buraya projenin canlı halinin linkini ekleyebilirsin]
+![](./project-views/udemig-education.gif)
 
 ---
 _Bu proje, eğitim amaçlı geliştirilmiştir ve ticari bir amacı bulunmamaktadır._
