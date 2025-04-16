@@ -1,0 +1,109 @@
+@import "./mixins";
+
+header {
+  background: rgba(229, 239, 229, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  @extend %flexbox;
+  padding: 27px 17px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+
+  .logo {
+    font-size: 33px;
+    font-weight: 700px;
+    white-space: nowrap;
+
+    @include laptop {
+      font-size: 25px;
+    }
+
+    span {
+      color: $main-color;
+    }
+  }
+  nav.active {
+    position: fixed;
+    right: 10px;
+    top: 120%;
+    display: flex !important;
+    flex-direction: column;
+
+    background: rgba(55, 55, 55, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.9px);
+    -webkit-backdrop-filter: blur(8.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    a {
+      font-size: 0.8rem;
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+  nav {
+    @extend %flexbox;
+    @include laptop {
+      display: none !important;
+    }
+    li {
+      margin: 15px 22px;
+      a {
+        font-size: $p-font;
+        font-weight: 500;
+        text-transform: uppercase;
+        @extend %transition;
+        display: block;
+
+        &:hover {
+          scale: 1.2;
+          color: $main-color;
+        }
+      }
+    }
+  }
+
+  .header-right {
+    @extend %flexbox;
+
+    a {
+      @include tablet {
+        display: none !important;
+      }
+
+      font-size: 20px;
+      margin: 0 18px 0 5px;
+      cursor: pointer;
+      @extend %transition;
+
+      &:hover {
+        color: $main-color;
+        transform: translateY(-3px);
+      }
+
+      &:first-child {
+        font-size: $p-font;
+        margin-right: 30px;
+      }
+    }
+
+    i {
+      color: $text-color;
+      cursor: pointer;
+      font-size: 20px;
+      @extend %transition;
+
+      &:hover {
+        color: $main-color;
+        scale: 1.2;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.popular-courses {
+  .btn {
+    cursor: pointer;
+    @extend %btn;
+    margin-top: 2rem;
+  }
+
+  .center {
+    text-align: center;
+
+    h2 {
+      font-size: $h2-font;
+      font-weight: 800;
+      color: $text-color;
+    }
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 3rem;
+    margin-top: 5rem;
+
+    .card {
+      &:hover > img {
+        scale: 1.05;
+      }
+      position: relative;
+      img {
+        width: 100%;
+        height: 300px;
+        @extend %transition;
+        cursor: pointer;
+        border-radius: 10px;
+        filter: brightness(70%);
+      }
+
+      .info {
+        position: absolute;
+        bottom: 40px;
+        left: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h4 {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: $text-color;
+          i {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}

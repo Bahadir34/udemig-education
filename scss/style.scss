@@ -1,0 +1,49 @@
+@import "../scss/variables";
+@import "./mixins";
+@import "./footer";
+@import "./contact";
+@import "./popular-courses";
+@import "./about-us";
+@import "./educations";
+@import "../scss/header";
+@import "../scss/reset";
+
+@import "./home";
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+%flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%transition {
+  transition: all 0.5s ease-in-out;
+}
+
+%btn {
+  padding: 13px 40px;
+  display: inline-block;
+  background-color: $main-color;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  @extend %transition;
+
+  &:hover {
+    border: 2px solid white;
+    transform: translateX(10px);
+    background-color: transparent;
+    color: $text-color;
+  }
+}
+
+section {
+  padding: 70px 17% 60px;
+}
